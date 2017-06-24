@@ -1,0 +1,24 @@
+<div class="col-md-6">
+  <h2>College App Tracker</h2>
+  <form [formGroup]="loginForm" (submit)="login()" class="form-horizontal bootstrap-form">
+    <div class="form-group">
+      <label>Email</label>
+      <input type="text" class="form-control" name="email" formControlName="email" autofocus/>
+    </div>
+    <div class="form-group">
+      <label>Password</label>
+      <input type="password" formControlName="password" class="form-control">
+    </div>
+    <div class="form-group ">
+      <button type="submit" name="submit" class="btn btn-default">Log In</button>
+    </div>
+    <div class="alert alert-success alert-dismissible" *ngIf="successMessage">
+      <button type="button" class="close" (click)="hideMessages()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      {{successMessage}}
+    </div>
+    <div class="alert alert-danger alert-dismissible" *ngIf="errorMessage">
+      <button type="button" class="close" (click)="hideMessages()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+      {{errorMessage}}
+    </div>
+  </form>
+</div>

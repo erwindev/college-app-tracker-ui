@@ -1,0 +1,15 @@
+<div>
+  <p>
+    Welcome <b>{{studentInfo.firstName}} {{studentInfo.lastName}}!</b>
+  </p>
+</div>
+<div *ngIf="collegeData">
+  <app-college-list [collegeData]="collegeData"></app-college-list>
+</div>
+<div>
+  <p>
+    <span class="pull-left">
+      <a  class="btn btn-default" (click)="listColleges()"><i class="glyphicon glyphicon-pencil"></i> List Colleges</a>
+    </span>
+  </p>
+</div>
