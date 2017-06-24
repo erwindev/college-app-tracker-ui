@@ -7,4 +7,8 @@ export class AppConstants {
 
   public static LOGIN_ROUTE = "login";
   public static DASHBOARD_ROUTE = "dashboard";
+  public static ABOUT_US_ROUTE = "about-us";
+  public static CONTACT_US_ROUTE = "contact-us";
+
+  public static STUDENT_INFO_KEY = "student_info_key";
 }
