@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  collegeTrackerApiUrl: "http://localhost:8999/api"
+  collegeTrackerApiUrl: "http://college-app-tracker:8080/api"
 };
