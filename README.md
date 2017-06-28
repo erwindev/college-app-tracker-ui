@@ -1,14 +1,10 @@
-# CollegeAppTrackerUi
+# College Application Tracker UI
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0-rc.4.
+This application is the front end for the College Tracker Service.  It is built in Angular2 using Angular CLI.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive/pipe/service/class/module`.
 
 ## Build
 
@@ -23,11 +19,6 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 Before running the tests make sure you are serving the app via `ng serve`.
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-
 ## Install Bootstrap
 ```
 npm install bootstrap --save
@@ -38,3 +29,19 @@ Note: Update style.css to include
 ```
 @import '~bootstrap/dist/css/bootstrap.css';
 ```
+
+## Docker build
+In order to build and push docker images, please login to you [Dockerhub](www.dockerhub.com) account.
+Make sure that you run `ng build -prod` before you do a Docker build.
+```
+$ docker build -t ealberto/college-app-tracker-ui .
+$ docker push ealberto/college-app-tracker-ui
+```
+
+The docker image will have an nginx webserver that serves up the web assets. 
+
+## Running the entire application via Docker
+The simplest way to spin up the entire application is to run all the components in Docker.  To do this, please refer to[college-app-tracker-docker](https://github.com/erwindev/college-app-tracker-docker)Github repo.
+
+## Questions:
+Contact Erwin Alberto (ealberto@me.com)
