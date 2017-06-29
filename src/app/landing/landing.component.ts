@@ -15,13 +15,13 @@ export class LandingComponent implements OnInit {
   private studentInfo;
   private collegeData;
 
-  constructor(private storage: StorageService,
+  constructor(private storageService: StorageService,
               private spinner: SpinnerService,
               private collegeTrackerService: CollegeTrackerService,
               private router: Router) { }
 
   ngOnInit() {
-    this.studentInfo = JSON.parse(this.storage.read<string>(AppConstants.STUDENT_INFO_KEY));
+    this.studentInfo = JSON.parse(this.storageService.read<string>(AppConstants.STUDENT_INFO_KEY));
   }
 
   listColleges(){
@@ -29,7 +29,11 @@ export class LandingComponent implements OnInit {
     this.collegeTrackerService.collegeList()
       .subscribe(
         data => {
-          this.collegeData = data;
+          this.collegeData = data.colleges;
+          //token is refreshed so save it in local storage
+          if (data.token) {
+            this.storageService.write(AppConstants.AUTH_TOKEN_KEY, data.token);
+          }
           this.spinner.display(false);
         },
         error => {
