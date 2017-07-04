@@ -16,12 +16,10 @@ before_script:
 
 script:
   - ng build --prod
-
-after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
-  - docker build -t $DOCKER_USER/college-tracker-app-ui .
-  - docker tag $DOCKER_USER/college-tracker-app-ui $DOCKER_USER/college-tracker-app-ui:latest
-  - docker push $DOCKER_USER/college-tracker-app-ui
+  - docker build -t $DOCKER_USER/college-app-tracker-ui .
+  - docker tag $DOCKER_USER/college-app-tracker-ui $DOCKER_USER/college-app-tracker-ui:latest
+  - docker push $DOCKER_USER/college-app-tracker-ui
 
 notifications:
   email:
