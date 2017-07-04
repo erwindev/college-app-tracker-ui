@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/erwindev/college-app-tracker-ui.svg?branch=master)](https://travis-ci.org/erwindev/college-app-tracker-ui)
 # College Application Tracker UI
 
 This application is the front end for the College Tracker Service.  It is built in Angular2 using Angular CLI.
