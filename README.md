@@ -35,11 +35,9 @@ Note: Update style.css to include
 In order to build and push docker images, please login to you [Dockerhub](www.dockerhub.com) account.
 Make sure that you run `ng build -prod` before you do a Docker build.
 ```
-$ docker build -t ealberto/college-app-tracker-ui .
-$ docker push ealberto/college-app-tracker-ui
+$ docker build -t <username>/college-app-tracker-ui .
+$ docker push <username>/college-app-tracker-ui
 ```
-
-The docker image will have an nginx webserver that serves up the web assets. 
 
 ## Running the entire application via Docker
 The simplest way to spin up the entire application is to run all the components in Docker.  To do this, please refer to[college-app-tracker-docker](https://github.com/erwindev/college-app-tracker-docker)Github repo.
