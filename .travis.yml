@@ -14,7 +14,7 @@ branches:
 before_script:
 - npm install -g @angular/cli
 script:
-- ng build --prod
+- ng build --env=prod
 - docker login -u $DOCKER_USER -p $DOCKER_PASS
 - docker build -t $DOCKER_USER/college-app-tracker-ui .
 - docker tag $DOCKER_USER/college-app-tracker-ui $DOCKER_USER/college-app-tracker-ui:latest

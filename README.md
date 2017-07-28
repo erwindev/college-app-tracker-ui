@@ -5,11 +5,11 @@ This application is the front end for the College Tracker Service.  It is built 
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve --host 0.0.0.0 --port=4200` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
+Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--env=prod` flag for a production build.
 
 ## Running unit tests
 
@@ -18,7 +18,7 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
+Before running the tests make sure you are serving the app via `ng serve --host 0.0.0.0 --port=4200`.
 
 ## Install Bootstrap
 ```
@@ -33,7 +33,7 @@ Note: Update style.css to include
 
 ## Docker build
 In order to build and push docker images, please login to you [Dockerhub](www.dockerhub.com) account.
-Make sure that you run `ng build -prod` before you do a Docker build.
+Make sure that you run `ng build --env=prod` before you do a Docker build.
 ```
 $ docker build -t <username>/college-app-tracker-ui .
 $ docker push <username>/college-app-tracker-ui
