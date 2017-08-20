@@ -12,8 +12,8 @@ import {CollegeTrackerService} from "../services/college-tracker.service";
 })
 export class LandingComponent implements OnInit {
 
-  private studentInfo;
-  private collegeData;
+  public studentInfo;
+  public collegeData;
 
   constructor(private storageService: StorageService,
               private spinner: SpinnerService,

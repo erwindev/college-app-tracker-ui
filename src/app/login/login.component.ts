@@ -13,11 +13,11 @@ import {CollegeTrackerService} from "../services/college-tracker.service";
 })
 export class LoginComponent implements OnInit {
 
-  private userData;
-  private errorMessage;
-  private successMessage;
+  public userData;
+  public errorMessage;
+  public successMessage;
 
-  private loginForm = this.fb.group({
+  public loginForm = this.fb.group({
     email: ["", [Validators.required]],
     password: ["", [Validators.required]],
   });

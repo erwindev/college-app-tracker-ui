@@ -11,7 +11,7 @@ import {AppConstants} from "../shared/app-constants";
 })
 export class NavComponent implements OnInit {
 
-  private isLoggedIn: boolean;
+  public isLoggedIn: boolean;
 
   constructor(private collegeTrackerService: CollegeTrackerService,
               private router: Router,
