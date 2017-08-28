@@ -1,6 +1,6 @@
 FROM node:8.2.1-alpine
 
-MAINTAINER <username@emailaddress.com>
+MAINTAINER Erwin Alberto
 
 # Install bash
 RUN apk add --update bash && rm -rf /var/cache/apk/*
