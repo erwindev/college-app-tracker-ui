@@ -18,7 +18,7 @@ pipeline {
         }    
         stage ('Build'){
             steps{
-                sh 'ng build --target=production --environment=prod'
+                sh 'npm run ng build --target=production --environment=prod'
             }
         }  
         stage ('Upload to S3'){
